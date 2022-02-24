@@ -1,0 +1,55 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/* kleur van de boxes */ 
+#r1,#r2,#r3,#r4,#r5,#r6,#r7,#r8{
+    background-color: #f83259;
+}
+#b1{
+   background-color: #63f6f3;
+}
+#y1{
+    background-color:#ffff04;
+}
+body div{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* GRID SIZING */
+
+#future{
+    display:grid;
+    grid-template-rows: repeat(10,1fr);
+    height: 1500px;
+}
+
+#future div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+@media(min-width:800px){
+    #future{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(min-width:1400px){
+    #future{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #b1{
+        grid-column: 3/4;
+        grid-row:1/4;
+    }
+    #y1{
+        grid-column: 4/6;
+        grid-row: 2/4;
+    }
+}
